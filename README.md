@@ -42,6 +42,7 @@ ans: break down using promises as promises are composable and hence can be trigg
 
 ans:
 
+```
 function test () {
 
   query("SELECT clientId FROM clients WHERE clientName='picanteverde';")
@@ -69,8 +70,9 @@ function test () {
       console.log('error')
 
     })
-    
+
 }
+```
 
 ![alt text](imgs/19.png?raw=true 'start')
 ans: first, third, second
@@ -79,6 +81,7 @@ ans: first, third, second
 
 ans:
 
+```
 Promise.resolve(1)
 
 .then((x)=>x+1) // 1 gets passed to then as x, so x+1 = 2, but nothing shown as no logging
@@ -92,3 +95,4 @@ Promise.resolve(1)
 .then((x)=>console.log(x)) // nothing to log?
 
 .catch(console.error) // no new errors have been provided here, so nothing to log again.
+```
