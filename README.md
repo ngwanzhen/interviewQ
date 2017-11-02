@@ -64,9 +64,15 @@ ans: first, third, second
 
 ans:
 Promise.resolve(1)
+
 .then((x)=>x+1) // 1 gets passed to then as x, so x+1 = 2, but nothing shown as no logging
+
 .then((x)=>{ throw new Error('My Error')}) // throwing an error here and calling it my error
+
 .catch((err)=>console.log(err)) // catching the error here logs the previous error provided to it 'My Error'
+
 .then((x)=>x+1) // chaining then like that, I don't think the resolved value 1 gets passed on to the x like that, so nothing happens?
+
 .then((x)=>console.log(x)) // nothing to log?
+
 .catch(console.error) // no new errors have been provided here, so nothing to log again.
