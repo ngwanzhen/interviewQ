@@ -41,20 +41,35 @@ ans: break down using promises as promises are composable and hence can be trigg
 ![alt text](imgs/18.png?raw=true 'start')
 
 ans:
+
 function test () {
+
   query("SELECT clientId FROM clients WHERE clientName='picanteverde';")
+
   .then((id) => {
+
     query('SELECT * FROM transactions WHERE clientId=' + id)
+
   })
+
   .then((transactions) => {
+
     transactions.each(function (transac) {
+
       query('UPDATE transactions SET value = ' + (transac.value * 0.1) + ' WHERE id=' + transac.id)
+
     })
+
     console.log('success!!')
+
   })
+
   .catch((err) => {
+
       console.log('error')
+
     })
+    
 }
 
 ![alt text](imgs/19.png?raw=true 'start')
@@ -63,6 +78,7 @@ ans: first, third, second
 ![alt text](imgs/20.png?raw=true 'start')
 
 ans:
+
 Promise.resolve(1)
 
 .then((x)=>x+1) // 1 gets passed to then as x, so x+1 = 2, but nothing shown as no logging
