@@ -1,3 +1,6 @@
+# Questions collected from Interviews.
+### Answers are my current guesses, please contribute by doing a PR if you think some of these are wrong or can be better explained!
+
 ![alt text](imgs/1.png?raw=true 'start')
 ans: B
 ![alt text](imgs/2.png?raw=true 'start')
