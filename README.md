@@ -28,11 +28,18 @@ ans: D
 ans: B
 ![alt text](imgs/15.png?raw=true 'start')
 ans: C
+
 ![alt text](imgs/16.png?raw=true 'start')
+<br />
+
 ans: err ( but i'm not sure why err is first, is it because if code is synchronous, code may not reach error handling if callback is triggered first and code breaks at callback )
+
 ![alt text](imgs/17.png?raw=true 'start')
+
 ans: break down using promises as promises are composable and hence can be triggered just using .then and .catch multiple times (Rather than re-wrting the callbacks again and again)
+
 ![alt text](imgs/18.png?raw=true 'start')
+
 ans:
 function test () {
   query("SELECT clientId FROM clients WHERE clientName='picanteverde';")
@@ -52,7 +59,9 @@ function test () {
 
 ![alt text](imgs/19.png?raw=true 'start')
 ans: first, third, second
+
 ![alt text](imgs/20.png?raw=true 'start')
+
 ans:
 Promise.resolve(1)
 .then((x)=>x+1) // 1 gets passed to then as x, so x+1 = 2, but nothing shown as no logging
